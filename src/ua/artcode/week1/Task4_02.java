@@ -1,4 +1,4 @@
-package ua.artcode.fyrsenko.week2day1;
+package ua.artcode.week1;
 
 import java.util.Arrays;
 import java.util.Scanner;

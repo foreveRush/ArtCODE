@@ -1,4 +1,4 @@
-package ua.artcode.fyrsenko.week2day1;
+package ua.artcode.week1;
 
 /**
  * Created by Serhii Fursenko on 02.06.16.

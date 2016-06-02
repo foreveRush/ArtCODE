@@ -1,11 +1,11 @@
-package ua.artcode.fyrsenko.week2day1;
+package ua.artcode.week1;
 
 import java.util.Scanner;
 
 /**
  * Created by admin on 01.06.16.
  */
-public class Task4_07 {
+public class Task4_06 {
 
     public static void main(String[] args) {
 
@@ -16,10 +16,8 @@ public class Task4_07 {
         try {
             a = scanner.nextInt();
             b = scanner.nextInt();
-            if(a%b==0) System.out.println("true "+ a/b +" " + 0 );
-            else if(b%a==0) System.out.println("true "+ b/a +" " + 0 );
-            else if (a>b)System.out.println("false " + a/b + " " + (((float)a/b) - (a/b)));
-            else System.out.println("false " + a/b + " " + (((float)a/b) - (a/b)));
+            int sum = a+b;
+            if(sum >=11 && sum<=19) System.out.println(sum);
         } catch (Exception e) {
             System.out.println("Error");
         }

@@ -1,6 +1,4 @@
-package ua.artcode.fyrsenko.week2day1;
-
-import com.sun.tools.corba.se.idl.constExpr.Equal;
+package ua.artcode.week1;
 
 import java.util.Scanner;
 
