@@ -5,9 +5,11 @@ package ua.artcode.fyrsenko.week2day1;
  */
 public class TaskA_06 {
 
-/*
-    7) Ввести с экрана число от 1 до 12. По номеру месяца выдать сообщение о
-    времени года. Если пользователь введет недопустимое число, программа
-    должна выдать сообщение об ошибке.
-    */
+
+    public static void main(String[] args) {
+        int speedKmH = 100;
+        int distKm =50;
+        float time = (float) distKm/speedKmH;
+        System.out.println(time+" hours");
+    }
 }
