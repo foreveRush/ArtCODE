@@ -20,8 +20,6 @@ public class Task7_04 {
         ShiftArray(array, 6);
         System.out.println(Arrays.toString(array));
 
-
-
     }
 
     public static void ShiftArray(int[] array, int delta) {
