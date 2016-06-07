@@ -13,32 +13,86 @@ public class Task3_5 {
 
     public static void main(String[] args) {
 
-        int[][] array = new int[5][];
-
-        array[0] = new int[]{1, 2};
-        array[1] = new int[]{1, 2, 3, 4, 5};
-        array[2] = new int[]{1, 2, 3, 4};
-        array[3] = new int[]{1, 2, 3};
-        array[4] = new int[]{1};
-
 
         // Task A
-        int indexOfMaxLengthLine = array[0].length;
-        int indexOfMinLengthLine = array[0].length;
 
-        for (int i = 1; i < array.length; i++) {
-            if (array[i].length > array[indexOfMaxLengthLine].length) indexOfMaxLengthLine = i;
-            if (array[i].length < array[indexOfMinLengthLine].length) indexOfMinLengthLine = i;
+        int[][] matrix = MatrixUtils.genMatrix(5, 3);
+        System.out.println("===== BEFORE =====");
+        MatrixUtils.printMatrix(matrix);
+        System.out.println();
+
+        int maxSum = matrix[0][0];
+        int minSum = Integer.MAX_VALUE;
+        int tempSum;
+
+        int indexOfMaxRow = 0;
+        int indexOfMinRow = 0;
+
+        for (int i = 0; i < matrix.length; i++) {
+
+            tempSum = matrix[i][0];
+
+            for (int j = 1; j < matrix[i].length; j++) {
+                tempSum += matrix[i][j];
+            }
+
+            if (tempSum > maxSum) {
+                maxSum = tempSum;
+                indexOfMaxRow = i;
+            }
+
+            if (tempSum < minSum) {
+                minSum = tempSum;
+                indexOfMinRow = i;
+            }
         }
 
-        int[] temp = array[indexOfMinLengthLine];
-        array[indexOfMinLengthLine] = array[indexOfMaxLengthLine];
-        array[indexOfMaxLengthLine] = temp;
+        int[] temp = matrix[indexOfMinRow];
+        matrix[indexOfMinRow] = matrix[indexOfMaxRow];
+        matrix[indexOfMaxRow] = temp;
 
-        MatrixUtils.printMatrix(array);
+        System.out.println("===== AFTER CHANGE ROWS=====");
+        MatrixUtils.printMatrix(matrix);
 
-        //Task B
 
+        // Task B
+
+        maxSum = matrix[0][0];
+        minSum = Integer.MAX_VALUE;
+        tempSum = 0;
+
+        int indexOfMaxCol = 0;
+        int indexOfMinCol = 0;
+        int j = 0;
+
+        for (int i = 0; i < matrix[0].length; i++) {
+            tempSum = matrix[0][i];
+            for (j = 1; j < matrix.length; j++) {
+
+                tempSum += matrix[j][i];
+            }
+
+            if (tempSum > maxSum) {
+                maxSum = tempSum;
+                indexOfMaxCol = i;
+            }
+
+            if (tempSum < minSum) {
+                minSum = tempSum;
+                indexOfMinCol = i;
+            }
+        }
+
+
+        for (int i = 0; i < matrix.length; i++) {
+
+            tempSum = matrix[i][indexOfMinCol];
+            matrix[i][indexOfMinCol] = matrix[i][indexOfMaxCol];
+            matrix[i][indexOfMaxCol] = tempSum;
+        }
+
+        System.out.println("===== AFTER CHANGE COLS =====");
+        MatrixUtils.printMatrix(matrix);
 
     }
 }

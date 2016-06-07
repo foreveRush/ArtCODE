@@ -14,7 +14,7 @@ public abstract class MatrixUtils {
 
         for (int i = 0; i < sizeX; i++) {
             for (int j = 0; j < sizeY; j++) {
-                matrix[i][j] = (int) (Math.random() * 10);
+                matrix[i][j] = (int) (Math.random() * 3);
             }
         }
         return matrix;
