@@ -21,15 +21,15 @@ public class Task3_10 {
     }
 
 
-    public static String removeCopies (String input) {
+    public static String removeCopies(String input) {
 
         String out = input;
         String[] words = input.split("\\s+");
-        for(int i=0; i<words.length-1; i++) {
-            for(int j=i+1; j<words.length; j++) {
+        for (int i = 0; i < words.length - 1; i++) {
+            for (int j = i + 1; j < words.length; j++) {
 
-                if(words[i].equalsIgnoreCase(words[j])) {
-                    out = out.replaceAll(words[i],"");
+                if (words[i].equalsIgnoreCase(words[j])) {
+                    out = out.replaceAll(words[i], "");
                 }
             }
         }

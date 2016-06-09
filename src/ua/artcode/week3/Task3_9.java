@@ -13,7 +13,7 @@ public class Task3_9 {
 
         int[][] matrix1 = MatrixUtils.genMatrix(2, 3);
         int[][] matrix2 = MatrixUtils.genMatrix(3, 4);
-        int[][] result = multiplyMatrixs(matrix1,matrix2);
+        int[][] result = multiplyMatrixs(matrix1, matrix2);
 
         System.out.println("Matrix #1");
         MatrixUtils.printMatrix(matrix1);
@@ -30,7 +30,6 @@ public class Task3_9 {
     }
 
 
-
     public static int[][] multiplyMatrixs(int[][] a, int[][] b) {
 
         if (a[0].length != b.length) {
@@ -40,16 +39,16 @@ public class Task3_9 {
 
         int[][] result = new int[a.length][b[0].length];
 
-        int newElement =0;
+        int newElement = 0;
 
-        for(int i=0; i< result.length; i++) {
-            for(int j=0; j<result[0].length;j++) {
-                newElement=0;
-                for(int z =0; z<b.length;z++) {
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[0].length; j++) {
+                newElement = 0;
+                for (int z = 0; z < b.length; z++) {
 
-                    newElement+= a[i][z]*b[z][j];
+                    newElement += a[i][z] * b[z][j];
                 }
-                result[i][j]=newElement;
+                result[i][j] = newElement;
             }
         }
 

@@ -37,7 +37,7 @@ public class Task3_8 {
         for (int i = 0; i < array.length; i++) {
             char[] temp = array[i].toCharArray();
             temp[0] = Character.toUpperCase(temp[0]);
-            result+= String.valueOf(temp)+ " ";
+            result += String.valueOf(temp) + " ";
         }
 
         return result;
